@@ -44,3 +44,4 @@ build/
 *.env
 secrets.properties
 config.properties
+env_var.bash
