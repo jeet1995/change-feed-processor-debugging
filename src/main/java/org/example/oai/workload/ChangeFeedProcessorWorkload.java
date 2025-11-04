@@ -57,13 +57,13 @@ public class ChangeFeedProcessorWorkload {
 
     // Optional environment variables with defaults
     private static final String DATABASE_NAME = getEnvOrDefault("DATABASE_NAME", "CFPWorkloadDB");
-    private static final String CONNECTION_MODE = getEnvOrDefault("CONNECTION_MODE", "DIRECT");
+    private static final String CONNECTION_MODE = getEnvOrDefault("CONNECTION_MODE", "GATEWAY");
     private static final String HOST_NAME = getEnvOrDefault("HOST_NAME", "cfp-host-" + System.currentTimeMillis());
     private static final String LEASE_PREFIX = getEnvOrDefault("LEASE_PREFIX", "workload");
     private static final int MAX_ITEM_COUNT = Integer.parseInt(getEnvOrDefault("MAX_ITEM_COUNT", "100"));
     private static final int FEED_POLL_DELAY_MS = Integer.parseInt(getEnvOrDefault("FEED_POLL_DELAY_MS", "5000"));
     private static final String STARTUP_DELAY = getEnvOrDefault("STARTUP_DELAY", "PT15S");
-    private static final int WORKLOAD_DURATION_MINUTES = Integer.parseInt(getEnvOrDefault("WORKLOAD_DURATION_MINUTES", "60"));
+    private static final int WORKLOAD_DURATION_MINUTES = Integer.parseInt(getEnvOrDefault("WORKLOAD_DURATION_MINUTES", "600000"));
 
     private static final List<String> PREFERRED_REGIONS = parsePreferredRegions();
 
